@@ -79,11 +79,6 @@ h3 {
 }
 
 
-.contact {
-	display: flex;
-	justify-content: space-between;
-}
-
 h3 + p {
 font-family: 'Open Sans Condensed', sans-serif;
 font-size: 1.25em;
@@ -108,8 +103,23 @@ img[src*="portfolio"] {
 		margin: 0 auto;
 		/*display: block;
 */	}
+
+@media(max-width: 767px) {
 .foot-nav {
 	display:none;
+}
+.contact {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto;
+	
+
+}
+
+.contact-item:nth-child(2) {
+margin-left: 200px;
+}
 }
 
 /*media queries*/
@@ -168,6 +178,7 @@ h4 {
 	}
 .contact {
 	justify-content: space-around;
+	align-items: center;
 }
 .foot-nav {
 	background: inherit;
