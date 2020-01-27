@@ -8,37 +8,43 @@ body {
 	font-family: 'Lato', sans-serif;
 	color:#505D6B;
 	text-align: center;
-	background: #F7F9FA; 
-	margin: 0;
+	background: #F7F9FA;
+	margin: 0 0;
+	width: fit-content;
+}
+
+.main-head  {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* align-items: center; */
 }
 header {
 	background: #F3F3F3;
-	padding: 25px 25px;
-	/*border: solid 1px tomat;*/
-/*display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;*/
 
 }
-/*Portfolio img*/
-img[alt^="Portfolio-example"] {
-	height: 230px;
-	max-width: 75%;
-	margin: 20px auto;
-}
+
 /*top-nav-bar*/
 h1 {
-	margin-top: 0;
-	margin-left: 40px;
+	margin: 0 auto;
+	/*margin-left: 40px;*/
 	font-size: 2.369em;
 }
 h2 {
 	font-size:1.777em;
 }
+.nav {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0
+	/* align-content: center; */
+
+}
+
 .foot-nav a, .nav a{
 	text-decoration: none;
-	color:#505D6B;
+	color:#F7F9FA;
 	text-transform: uppercase;
 	font-size: 1.1em;
 	letter-spacing: .1em;
@@ -46,27 +52,43 @@ h2 {
 	cursor: pointer;
 }
 a:hover {
-	color:#507A6B ;
+	color:rgba(253, 203, 92, .8) ;
 }
 a:active {
-	color: teal;
+	letter-spacing: .2em;
 }
-.nav li, .foot-nav {
+.nav li, .foot-nav li{
 	list-style-type: none;
-	border: 1px solid #F7F9FA;
 	margin-bottom: 10px;
 	padding:5px;
-	background: white;
+
 }
+.nav li {
+	background: rgba(25, 25, 25, .256);
+	padding:10px 0;
+	border-radius: 6px;
+}
+.foot-nav li {
+	padding:0 8px;
+
+}
+.foot-nav li a {
+	color:#505D6B;
+}
+
 .main-nav {
-	max-width: 70%;
+	width: 70%;
 	margin: 0 auto ;
+
 }
 
 /*Portfolio */
+.p-contain-item {
+	padding: 20px;
+}
 img[src*="portfolio"] {
 	height: 100%;
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 	display: block;
 }
@@ -101,175 +123,168 @@ footer {
 }
 
 img[src*="portfolio"] {
-	height: 200px;
-	width: 350px;
-	margin: 0 auto;
-		/*display: block;
-	*/	}
+	/*!!!!T_T_H_F_B*/
+	/*	height: 200px;
+	max-width: 350px;*/
+	/* margin: 0; */
+	/*display: block;
+	*/
+}
 
-	.skills-wrap {
+.skills-wrap {
 	width: 80%;
 	text-align: center;
 	font-size: 1.1em;
 	margin: 55px auto;
 }
 
-	@media(max-width: 767px) {
-		.foot-nav {
-			display:none;
-		}
-		.contact {
-			display: flex;
-			justify-content: space-between;
-			width: 80%;
-			margin: 0 auto;
-
-
-		}
-
-		.contact-item:nth-child(2) {
-			margin-left: 200px;
-		}
+@media(max-width: 767px) {
+	.foot-nav {
+		display:none;
 	}
+	.contact {
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
+		margin: 0 auto;
 
-
-	/*media queries*/
-
-	@media(min-width:768px) {
-		.nav, .intro, .nav, .foot-nav, .foot-nav-cont, .contact{
-			display: flex;
-		}
-
-		.nav, .foot-nav {
-			justify-content: space-around;
-		}
-
-
-		img[alt*="Portfolio"] {
-			order:1;
-		}
-
-		.intro p {
-			font-size: 1.35em;
-			padding: 10px;
-		}
-
-
-		.port-container {
-			display: flex;
-			align-items: flex-start;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			flex-direction: row;		
-		}
-		.p-contain-item  {
-			/*flex-grow: 1;*/
-			/*border:1px solid teal;*/
-			width: 50%;
-			padding: 10px;
-		}
-		h3 + p {
-			font-family: 'Open Sans Condensed', sans-serif;
-			font-size: 1.45em;
-			max-width: 700px;
-			margin: 0 auto;
-		}
-
-		h4  a[href*="#home"] {
-			border: solid 2px teal;
-			display: none;
-		}
-		h4 {
-			font-size: 1.3em;
-			margin-left: 20px;
-		}
-		.foot-nav-item:not(:nth-child(4)){
-			margin-right: 30px;
-
-		}
-		.contact {
-			justify-content: space-around;
-			align-items: center;
-		}
-		.foot-nav {
-			background: inherit;
-			border: none;
-		}
 
 	}
 
-	/*!2nd Media Querry!!*/
-
-	@media(min-width:1024px) {
-		body {
-
-		}
-
-		.nav, .intro, .main-head, .main-nav {
-			display: flex;
-		}
-
-		.main-head {
-			justify-content:space-between;
-			/*border:1px solid red;*/
-		}
-		.main-nav {
-			max-width: 70%;
-			margin: 0;
-		}
-		.nav, .footer-main {
-			/*border: 1px solid teal;*/
-			width:100%;
-			justify-content: space-around;
-		}
-
-		.intro p {
-			font-size: 1.65em;
-			padding: 10px;
-		}
+	.contact-item:nth-child(2) {
+		margin-left: auto;
+	}
+}
 
 
-		/*Img area*/
-		.port-container {
+/*media queries*/
 
-			display: flex;
-			align-items: flex-start;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			flex-direction: row;
+@media(min-width:768px) {
 
-		}
+	header {
+		padding-top: 60px;
+	}
+	h1 {
+		margin-bottom: 20px;
+	}
+	.nav, .intro, .nav, .foot-nav, .foot-nav-cont, .contact{
+		display: flex;
+		/* align-items: center; */
+	}
+	.intro {
+		padding: 9px 11px 37px;
+	}
 
-		.p-contain-item  {
-			width:380px;
-			padding: 10px;
-			flex-shrink: 1;
+	.nav, .foot-nav {
+		flex-direction: row;
+		-ms-align-items: center;
+		justify-content: space-around;
+		-ms-align-items: center;
+		align-items: center;
+	}
 
-		}
-		h3 + p {
-			font-family: 'Open Sans Condensed', sans-serif;
-			font-size: 1.85em;
-			max-width: 700px;
-			margin: 0 auto;
-		}
+	.nav li {
+		padding: 3px 15px;
+	}
 
-		.nav li {
-			margin: auto 10px;
-		}
+	img[alt*="Portfolio"] {
+		order:1;
+	}
 
-		.skills-wrap {
-			width:60%;
-		}
+	.intro p {
+		font-size: 1.35em;
+		padding: 10px;
+	}
+
+
+	.port-container {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		flex-direction: row;		
+	}
+	.p-contain-item  {
+		width: 50%;
+		padding: 10px;
+	}
+	h3 + p {
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 1.45em;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	h4  a[href*="#home"] {
+		border: solid 2px teal;
+		display: none;
+	}
+	h4 {
+		font-size: 1.3em;
+		margin-left: 20px;
+	}
+	.foot-nav-item:not(:nth-child(4)){
+		margin-right: 30px;
 
 	}
+	.contact {
+		justify-content: space-around;
+		align-items: baseline;
+	}
+	.foot-nav {
+		background: inherit;
+		border: none;
+	}
+
+}
+
+/*!2nd Media Querry!!*/
+
+@media(min-width:1024px) {
+
+	.main-head {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.intro p {
+		font-size: 1.65em;
+		padding: 10px;
+	}
+
+	.nav {
+		justify-content: flex-end;
+	}
+
+	.p-contain-item  {
+		/*width:33.3%;*/
+		flex:0 340px;
+		padding: 10px;			
+
+	}
+	h3 + p {
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 1.85em;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.nav li {
+		margin: auto 10px;
+	}
+
+	.skills-wrap {
+		width:60%;
+	}
+
+}
 
 @media(min-width:1200px ) {
 
-.port-container {
+	.port-container {
 
-max-width: 1200px;
-margin: 0 auto;
-}
+		max-width: 1200px;
+		margin: 0 auto;
+	}
 }
 
 
